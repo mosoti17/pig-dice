@@ -5,12 +5,16 @@ function player1(points) {
 player1.prototype.rollScore = function (randomValue) {
   while (randomValue > 0) {
     if (randomValue === 1) {
-    alert("Next Players Turn")
+    alert("Next Player's Turn")
+    $('#button1').prop('disabled',true);
+    $('#button2').prop('disabled',false);
     break;
   }else {
     return this.points += randomValue;
   }
+
   }
+
 }
 function player2(points) {
   this.points = points;
@@ -20,6 +24,8 @@ player2.prototype.rollScore = function (randomValue) {
   while (randomValue > 0) {
     if (randomValue === 1) {
     alert("Next Players Turn")
+    $('#button2').prop('disabled',true);
+    $('#button1').prop('disabled',false);
     break;
   }else {
     return this.points += randomValue;
@@ -37,6 +43,8 @@ $(document).ready(function () {
 
     newPlayer1.rollScore(input1)
     console.log(newPlayer1.points)
+    $("ul#roll1").text("Player1's roll is " + input1)
+    $("ul#results1").text("Player1's total is " +newPlayer1.points)
   });
   var newPlayer2 = new player2(0);
   $("form#player2").click(function (event) {
@@ -45,6 +53,8 @@ $(document).ready(function () {
 
     newPlayer2.rollScore(input2)
     console.log(newPlayer2.points)
+    $("ul#roll2").text("Player2's roll is " + input2)
+    $("ul#results2").text("Player2's total is " +newPlayer2.points)
   });
 
 });
