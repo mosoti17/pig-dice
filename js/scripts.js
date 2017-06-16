@@ -1,26 +1,50 @@
 ///Business logic
-function player1(input1) {
-  this.input1 = input1;
+function player1(points) {
+  this.points = points;
+}
+player1.prototype.rollScore = function (randomValue) {
+  while (randomValue > 0) {
+    if (randomValue === 1) {
+    alert("Next Players Turn")
+    break;
+  }else {
+    return this.points += randomValue;
+  }
+  }
+}
+function player2(points) {
+  this.points = points;
 
 }
-function player2(input2) {
-  this.input2 = input2;
-
+player2.prototype.rollScore = function (randomValue) {
+  while (randomValue > 0) {
+    if (randomValue === 1) {
+    alert("Next Players Turn")
+    break;
+  }else {
+    return this.points += randomValue;
+  }
+  }
 }
 
 ///User Interface
 $(document).ready(function () {
-  $("form#player1").submit(function (event) {
+  var newPlayer1 = new player1(0);
+
+  $("form#player1").click(function (event) {
     event.preventDefault();
     var input1 = Math.floor(Math.random() * 6) + 1;
-    var newPlayer1 = new player1(input1);
-    console.log(newPlayer1)
+
+    newPlayer1.rollScore(input1)
+    console.log(newPlayer1.points)
   });
-  $("form#player2").submit(function (event) {
+  var newPlayer2 = new player2(0);
+  $("form#player2").click(function (event) {
     event.preventDefault();
     var input2 = Math.floor(Math.random() * 6) + 1;
-    var newPlayer2 = new player2(input2);
-    console.log(newPlayer2)
+
+    newPlayer2.rollScore(input2)
+    console.log(newPlayer2.points)
   });
 
 });
