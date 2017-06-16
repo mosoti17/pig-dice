@@ -9,7 +9,12 @@ player1.prototype.rollScore = function (randomValue) {
     $('#button1').prop('disabled',true);
     $('#button2').prop('disabled',false);
     break;
-  }else {
+  }else if (this.points+randomValue > 100) {
+    alert("Player1 has won")
+    $('#button1').prop('disabled',true);
+    $('#button2').prop('disabled',true);
+    break;
+  } else {
     return this.points += randomValue;
   }
 
@@ -27,7 +32,13 @@ player2.prototype.rollScore = function (randomValue) {
     $('#button2').prop('disabled',true);
     $('#button1').prop('disabled',false);
     break;
-  }else {
+  }else if (this.points > 100) {
+    alert("Player2 has won")
+    $('#button1').prop('disabled',true);
+    $('#button2').prop('disabled',true);
+    break;
+
+  }  else {
     return this.points += randomValue;
   }
   }
