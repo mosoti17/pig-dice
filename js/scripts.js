@@ -54,8 +54,8 @@ $(document).ready(function () {
 
     newPlayer1.rollScore(input1)
     console.log(newPlayer1.points)
-    $("ul#roll1").text("Player1's roll is " + input1)
-    $("ul#results1").text("Player1's total is " +newPlayer1.points)
+    $("span#roll1").text(input1)
+    $("span#results1").text(newPlayer1.points)
   });
   var newPlayer2 = new player2(0);
   $("form#player2").click(function (event) {
@@ -64,8 +64,8 @@ $(document).ready(function () {
 
     newPlayer2.rollScore(input2)
     console.log(newPlayer2.points)
-    $("ul#roll2").text("Player2's roll is " + input2)
-    $("ul#results2").text("Player2's total is " +newPlayer2.points)
+    $("span#roll2").text(input2)
+    $("span#results2").text(newPlayer2.points)
   });
 
 });

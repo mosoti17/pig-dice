@@ -17,10 +17,11 @@ body{
 .results{
   text-align: center;
 }
-.results h2{
-font-size: 50px;
-
+.results p{
+  font-size: 20px;
+  color: #c468e2;
 }
+
 #player1{
   text-align: center;
 
@@ -51,4 +52,15 @@ h2{
 }
 li{
 color: #DEA527;
+}
+
+.results1{
+  border-right: 2px solid white;
+}
+span{
+  color: #345e10;
+}
+h3{
+  color:  white;
+  font-style: italic;
 }
