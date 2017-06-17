@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Frijole|Pangolin" rel="stylesheet">
     <title>pig-dice</title>
   </head>
   <body>
@@ -11,39 +12,61 @@
       <div class="header">
       <h1>Pig Dice</h1>
       </div>
-<div class="container">
+      <div class="container">
+      <div class="row">
+
+          <div class=" col-md-8 col-md-offset-2 rules">
+            <h2>Rules</h2>
+            <ol>
+              <li>The goal is to reach 100 points.The first player to reach 100 points wins</li>
+              <li>The players should then decide on how many times each will roll e.g 3times of 4times</li>
+              <li>If a player roles 1 is turn ends and the 1 will not be added to the total</li>
+              <li>When a player reaches a total of 100 or more points, the game ends and that player is the winner.</li>
+            </ol>
+
+          </div>
+
+      </div>
       <div class="row">
       <div class="col-md-4">
         <form id="player1">
-          <br><br><label>Player 1</label><br><br>
+          <label>Player 1</label><br><br>
           <button type="submit" name="submit" id="button1">Roll Dice</button>
 
         </form>
 
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 results">
         <h2>Result</h2>
-        <div class="row">
-          <ul id="roll1">
+        <div class="col-md-6">
+          <div class="row">
 
-          </ul>
-          <ul id="results1">
+            <ul id="roll1">
 
-          </ul>
+            </ul>
+            <ul id="results1">
+
+            </ul>
+          </div>
         </div>
-        <div class="row">
-          <ul id="roll2">
+        <div class="col-md-6">
+          <div class="row">
 
-          </ul>
-          <ul id="results2">
+            <ul id="roll2">
 
-          </ul>
+            </ul>
+            <ul id="results2">
+
+            </ul>
+          </div>
+
+        </div>
         </div>
 
-      </div>
+
       <div class="col-md-4">
         <form id="player2">
-          <br><br><label>Player 2</label><br><br>
+          <label>Player 2</label><br><br>
           <button type="submit" name="submit" id="button2">Roll Dice </button>
 
         </form>
