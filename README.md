@@ -16,4 +16,4 @@
 # link to site on GitHub Pages
  https://mosoti17.github.io/pig-dice/
 # copyright and license information
-[license and copyright](license)
+[license and copyright](licence)
