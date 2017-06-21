@@ -14,6 +14,6 @@
     * Output: 'Score' = 6
 * The program will add the score until it reaches 100 and then disable the buttons and alert the winner.
 # link to site on GitHub Pages
- https://mosoti17.github.io/ping-pong
+ https://mosoti17.github.io/pig-dice/
 # copyright and license information
 [license and copyright](licence)
